@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { FormGeneratorItem, FormGeneratorButton } from '@/components/form/types'
-  import FormGenerator from '@/components/form/Generator.vue'
+  import UiFormGenerator from '@/components/form/Generator.vue'
   import { ref } from 'vue'
 
   const model = ref({
@@ -97,7 +97,7 @@
 
 <template>
   <main>
-    <FormGenerator v-model="model" @click:button="onButton" :items />
+    <UiFormGenerator v-model="model" @click:button="onButton" :items />
     
     <ul style="margin-top: 2rem">
       <span>v-model</span>

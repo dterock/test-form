@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import type { FormGeneratorItem } from '@/components/form/types'
-  import FormGenerator from '@/components/form/Generator.vue'
+  import UiFormGenerator from '@/components/form/Generator.vue'
   import UiInput from '@/components/form/InputText.vue'
   import { ref } from 'vue'
 
@@ -35,11 +35,11 @@
 
 <template>
   <main>
-    <FormGenerator @click:button="onClick" :items>
+    <UiFormGenerator @click:button="onClick" :items>
       <template #0="props">
         <UiInput v-bind="props" :class="M.theme" :style="{ '--color': color }" />
       </template>
-    </FormGenerator>
+    </UiFormGenerator>
   </main>
 </template>
 
