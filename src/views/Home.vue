@@ -97,7 +97,7 @@
 
 <template>
   <main>
-    <FormGenerator action="/terst" v-model="model" @click:button="onButton" :items />
+    <FormGenerator v-model="model" @click:button="onButton" :items />
     
     <ul style="margin-top: 2rem">
       <span>v-model</span>
