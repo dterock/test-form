@@ -3,7 +3,7 @@
   import UiFormGenerator from '@/components/form/Generator.vue'
   import { ref } from 'vue'
 
-  const model = ref({
+  const initialModel = () => ({
     login: '',
     password: '',
     checkbox_1: false,
@@ -11,6 +11,8 @@
     select: 'no select',
     about: ''
   })
+
+  const model = ref(initialModel())
 
   const items: FormGeneratorItem[] = [
     {
@@ -97,7 +99,7 @@
 
 <template>
   <main>
-    <UiFormGenerator v-model="model" @click:button="onButton" :items />
+    <UiFormGenerator @reset="model = initialModel()" v-model="model" @click:button="onButton" :items />
     
     <ul style="margin-top: 2rem">
       <span>v-model</span>

@@ -17,7 +17,7 @@
     <textarea
       v-bind="$attrs"
       @input="onInput"
-      :value="model || ($attrs.value as string)"
+      :value="model"
       :class="M.textarea"
     />
   </div>
