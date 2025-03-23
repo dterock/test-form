@@ -13,7 +13,7 @@
 
 <template>
   <label :class="[ M.wrap, props.class ]" :style>
-    <input v-bind="$attrs" @change="onChange" :class="M.input" type="checkbox">
+    <input v-bind="$attrs" @change="onChange" :checked="model" :class="M.input" type="checkbox">
     <span v-if="label">{{ label }}</span>
   </label>
 </template>
