@@ -14,12 +14,7 @@
 <template>
   <div :class="[ M.wrap, props.class ]" :style>
     <span v-if="label" :class="M.label">{{ label }}</span>
-    <textarea
-      v-bind="$attrs"
-      @input="onInput"
-      :value="model"
-      :class="M.textarea"
-    />
+    <textarea v-bind="$attrs" @input="onInput" :value="model" :class="M.textarea" />
   </div>
 </template>
 

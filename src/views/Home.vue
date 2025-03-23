@@ -99,7 +99,11 @@
 
 <template>
   <main>
-    <UiFormGenerator @reset="model = initialModel()" v-model="model" @click:button="onButton" :items />
+    <UiFormGenerator
+      v-model="model"
+      @reset="model = initialModel()"
+      @click:button="onButton" :items
+    />
     
     <ul style="margin-top: 2rem">
       <span>v-model</span>

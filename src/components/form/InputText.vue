@@ -12,14 +12,9 @@
 
 
 <template>
-  <label :class="[ M.wrap, props.class ]" :style="props.style">
+  <label :class="[ M.wrap, props.class ]" :style>
     <span v-if="label" :class="M.label">{{ label }}</span>
-    <input
-      v-bind="$attrs"
-      @input="onInput"
-      :class="M.input"
-      :value="model || ($attrs.value as string)"
-    >
+    <input v-bind="$attrs" @input="onInput" :value="model" :class="M.input">
   </label>
 </template>
 
